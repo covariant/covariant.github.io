@@ -52,7 +52,7 @@
     </style>
 </head>
 
-<header>
+<header id="header">
     <h1>ai bud</h1>
   </div>
 </header>
@@ -65,11 +65,20 @@
 <script src="../js/chatbot.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/chatbot.css" />
 
+
+<form id="form1">
+	<input type="text" name="firstname" />
+</form>
+
+
+
 <div id="demo">
     <div id="chatBotCommandDescription"></div>
     <input id="humanInput" type="text" placeholder="Say something" />
 
     <!-- <div class="button" onclick="if (!ChatBot.playConversation(sampleConversation,4000)) {alert('conversation already running');};">Play sample conversation!</div> -->
+
+    <button id="submit-button">Submit</button>
     <div class="button" onclick="$('#chatBotCommandDescription').slideToggle();" style="margin-right:10px">Examples</div>
 
 
@@ -80,6 +89,12 @@
         <div id="chatBotHistory"></div>
     </div>
 </div>
+
+<script type="text/javascript">
+	document.getElementById("submit-button").onclick = function() {
+		document.getElementById("form1").submit();
+	}
+</script>
 
 
 <script>
