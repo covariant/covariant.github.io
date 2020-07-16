@@ -7,7 +7,7 @@
     <style>
         body {
             color: #333;
-            background-color: #efefef;
+            background-color: #fff;
             font: 13px helvetica,arial,freesans,clean,sans-serif;
         }
         #demo {
@@ -33,7 +33,7 @@
         }
         .button {
             display: inline-block;
-            background-color: darkcyan;
+            background-color: rgba(0, 0, 0, 0.438);
             color: #fff;
             padding: 8px;
             cursor: pointer;
@@ -51,7 +51,16 @@
         }
     </style>
 </head>
+
+<header>
+    <h1>ai bud</h1>
+  </div>
+</header>
+
 <body>
+
+    <div id="page-container">
+        <div id="content-wrap">
 
 <script src="../js/chatbot.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/chatbot.css" />
@@ -60,8 +69,9 @@
     <div id="chatBotCommandDescription"></div>
     <input id="humanInput" type="text" placeholder="Say something" />
 
-    <div class="button" onclick="if (!ChatBot.playConversation(sampleConversation,4000)) {alert('conversation already running');};">Play sample conversation!</div>
-    <div class="button" onclick="$('#chatBotCommandDescription').slideToggle();" style="margin-right:10px">What can I say?</div>
+    <!-- <div class="button" onclick="if (!ChatBot.playConversation(sampleConversation,4000)) {alert('conversation already running');};">Play sample conversation!</div> -->
+    <div class="button" onclick="$('#chatBotCommandDescription').slideToggle();" style="margin-right:10px">Examples</div>
+
 
     <div style="clear: both;">&nbsp;</div>
 
@@ -93,7 +103,7 @@
         }
     };
     ChatBot.init(config);
-    ChatBot.setBotName("Duck Duck Go Bot");
+    ChatBot.setBotName("ai bud");
     ChatBot.addPattern("^hi$", "response", "Howdy, friend", undefined, "Say 'Hi' to be greeted back.");
     ChatBot.addPattern("^bye$", "response", "See you later buddy", undefined, "Say 'Bye' to end the conversation.");
     ChatBot.addPattern("(?:my name is|I'm|I am) (.*)", "response", "hi $1, thanks for talking to me today", function (matches) {
@@ -105,5 +115,16 @@
     },"Say 'compute [number] plus [number]' to make the bot your math monkey");
 
 </script>
+
+
+<footer id="footer">
+    <p><a href="https://github.com/ddsky/chatbot">Chatbot</a> from ddsky. Results from <a href="https://duckduckgo.com">Duck Duck Go</a>.</p>
+</footer>
+
+
+</div></div>
 </body>
+
+
+
 </html>

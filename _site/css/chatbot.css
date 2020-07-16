@@ -1,3 +1,39 @@
+header {
+    padding: 10px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+  }
+
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+    text-align: center;
+  }
+
+button {
+    font-size: 100%; 
+    font-family:inherit; 
+    background-color: inherit;
+    color: white;
+    border: 0; 
+    padding: 0
+}
+
+<!-- added -->
+
 .chatBotChatEntry {
     padding: 20px;
     background-color: #fff;
