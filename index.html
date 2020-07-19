@@ -114,7 +114,7 @@
     ChatBot.addPattern("(what is the )?meaning of life", "response", "42", undefined, "Say 'What is the meaning of life' to get the answer.");
     ChatBot.addPattern("compute ([0-9]+) plus ([0-9]+)", "response", undefined, function (matches) {
         ChatBot.addChatEntry("That would be "+(1*matches[1]+1*matches[2])+".","bot");
-    },"Say 'compute [number] plus [number]' to make the bot your math monkey");
+    },"Say 'compute [number] plus [number]'");
 
 </script>
 
